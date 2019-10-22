@@ -60,6 +60,7 @@
             this.BtnLogin.TabIndex = 2;
             this.BtnLogin.Text = "Login";
             this.BtnLogin.UseVisualStyleBackColor = true;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // TxtPassword
             // 
@@ -85,6 +86,7 @@
             this.BtnClose.TabIndex = 5;
             this.BtnClose.Text = "Close";
             this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // FrmLogin
             // 

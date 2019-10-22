@@ -11,7 +11,7 @@ namespace PRG282_Project
         {
 
         }
-        private string Shift(string text, int shiftSize)
+        public string Shift(string text, int shiftSize)
         {
             string newText = string.Empty;
             for (int i = 0; i < text.Length; i++)
