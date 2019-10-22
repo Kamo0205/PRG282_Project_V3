@@ -14,16 +14,18 @@ namespace PRG282_Project
         private string rank;
         private string username;
         private string password;
+        private Cipher cipher;
 
         public Person(string id, string name, string surname, int age, string rank, string password)
         {
+            cipher = new Cipher();
             this.id = id;
             this.name = name;
             this.surname = surname;
             this.age = age;
             this.rank = rank;
-            this.username = this.Name.Substring(0,3)+this.Surname.Substring(this.Surname.Length - 3,2);
-            this.password = password;
+            this.username = this.Name.Substring(0,3)+this.Surname.Substring(this.Surname.Length - 2,2);
+            this.password = cipher.Shift(password,3);
         }
 
         public string Id { get => id; }

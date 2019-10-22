@@ -12,6 +12,7 @@ namespace PRG282_Project
     public partial class FrmLogin : Form
     {
         LoginModel lm = new LoginModel();
+        PersonModel pm = new PersonModel();
         Cipher cipher = new Cipher();
         public FrmLogin()
         {
@@ -32,7 +33,7 @@ namespace PRG282_Project
                     if ((login[0].ToLower() == TxtUsername.Text.ToLower()) && (login[1] == cipher.Shift(TxtPassword.Text,3)))
                     {
                         MessageBox.Show("Successful Login", "Login Attempt", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmWelcomeScreen welcomeScreen = new FrmWelcomeScreen();
+                        FrmWelcomeScreen welcomeScreen = new FrmWelcomeScreen(pm.IsAboveOfficer(login[0]),login[0]);
                         this.Hide();
                         welcomeScreen.ShowDialog();
                         this.Close();

@@ -9,19 +9,11 @@ using System.Windows.Forms;
 
 namespace PRG282_Project
 {
-    public partial class FrmEncryptDecrypt : Form
+    public partial class ModifyUsers : Form
     {
-        public FrmEncryptDecrypt(bool encrypt)
+        public ModifyUsers()
         {
             InitializeComponent();
-            if (encrypt)
-            {
-                BtnDecrypt.Visible = false;
-            }
-            else
-            {
-                BtnEncrypt.Visible = false;
-            }
         }
     }
 }
