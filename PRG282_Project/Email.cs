@@ -5,34 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Mail;
 
-namespace EmailPractice
+namespace PRG282_Project
 {
     public class Email
     {
-        private string message;
-
-        public string Message
-        {
-            get { return message; }
-            set { message = value; }
-        }
-
-        private string sendTo;
-
-        public string SendTo
-        {
-            get { return sendTo; }
-            set { sendTo = value; }
-        }
-
-        private string subject;
-
-        public string Subject
-        {
-            get { return subject; }
-            set { subject = value; }
-        }
-
         public void SendEmail(string message)
         {
             try
