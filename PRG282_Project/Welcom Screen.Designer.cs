@@ -107,6 +107,16 @@
             this.BtnAddUser.UseVisualStyleBackColor = true;
             this.BtnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
             // 
+            // BtnAddUser
+            // 
+            this.BtnAddUser.Location = new System.Drawing.Point(75, 136);
+            this.BtnAddUser.Name = "BtnAddUser";
+            this.BtnAddUser.Size = new System.Drawing.Size(118, 23);
+            this.BtnAddUser.TabIndex = 6;
+            this.BtnAddUser.Text = "Add User";
+            this.BtnAddUser.UseVisualStyleBackColor = true;
+            this.BtnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
+            // 
             // FrmWelcomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
