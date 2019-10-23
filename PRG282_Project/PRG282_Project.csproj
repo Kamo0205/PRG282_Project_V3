@@ -55,6 +55,7 @@
     <Compile Include="Cipher.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="DataHandler.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="EncryptDecrypt.cs">
       <SubType>Form</SubType>
     </Compile>

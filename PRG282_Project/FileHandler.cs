@@ -28,6 +28,21 @@ namespace PRG282_Project
                     while ((line = sr.ReadLine()) != null)
                     {
                         text.Add(line);
+                        string[] words = line.Split(' ');
+                        List<char> initials = new List<char>();
+                        foreach (string word in words)
+                        {
+                            initials.Add(char.Parse(word.Substring(0, 1)));
+                        }
+                        string wordA = initials.ToString();
+                        initials.Reverse();
+                        string wordB = initials.ToString();
+                        if (wordA == wordB)
+                        {
+                            string emailtext = line + " Phrase: " + wordA;
+                            Email email = new Email();
+                            email.SendEmail(emailtext);
+                        }
                     }
                 }
             }
