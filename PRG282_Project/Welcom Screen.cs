@@ -20,6 +20,7 @@ namespace PRG282_Project
             {
                 BtnEncryptMessage.Visible = false;
                 BtnViewDecryptedMessages.Visible = false;
+                BtnAddUser.Visible = false;
             }
         }
 

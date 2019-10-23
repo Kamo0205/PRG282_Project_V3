@@ -101,6 +101,77 @@ End Catch",person.Name,person.Surname,person.Age,getRankID(person.Rank),person.U
             }
         }
 
+        public void DeletePerson(Person person)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+
+                    string query = string.Format(@"Begin Try
+	Begin Transaction
+		Delete From [tblUsers]
+        Where [Name] = '{0}' And [Surname] = '{1}'
+	Commit Transaction
+End Try
+Begin Catch
+	Rollback
+End Catch", person.Name, person.Surname);
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException SqlEx)
+            {
+                Console.WriteLine(SqlEx.Message); ;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public void UpdatePerson(Person oldPerson, Person newPerson)
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+
+                    string query = string.Format(@"Begin Try
+	Begin Transaction
+		Update [tblUsers]
+        set [Name] = '{0}',[Surname] = '{1}',[Age] = {2},[RankID] = {3},[Username] = '{4}',[Password] = '{5}'
+        Where [Name] = '{6}' And [Surname] = '{7}'
+	Commit Transaction
+End Try
+Begin Catch
+	Rollback
+End Catch", oldPerson.Name,oldPerson.Surname,oldPerson,oldPerson.Age, getRankID(oldPerson.Rank),oldPerson.Password,newPerson.Name, newPerson.Surname);
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException SqlEx)
+            {
+                Console.WriteLine(SqlEx.Message); ;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
         public List<Message> ReadMessages()
         {
             DataTable result = new DataTable();

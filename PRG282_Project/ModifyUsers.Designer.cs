@@ -42,6 +42,11 @@
             this.LblPassword = new System.Windows.Forms.Label();
             this.CmbRank = new System.Windows.Forms.ComboBox();
             this.LstUsers = new System.Windows.Forms.ListBox();
+            this.BtnAdd = new System.Windows.Forms.Button();
+            this.BtnRemove = new System.Windows.Forms.Button();
+            this.BtnModify = new System.Windows.Forms.Button();
+            this.BtnPrevious = new System.Windows.Forms.Button();
+            this.BtnNext = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblHeader
@@ -104,6 +109,7 @@
             // 
             // TxtUsername
             // 
+            this.TxtUsername.Enabled = false;
             this.TxtUsername.Location = new System.Drawing.Point(141, 117);
             this.TxtUsername.Name = "TxtUsername";
             this.TxtUsername.Size = new System.Drawing.Size(100, 20);
@@ -160,12 +166,65 @@
             this.LstUsers.Name = "LstUsers";
             this.LstUsers.Size = new System.Drawing.Size(384, 160);
             this.LstUsers.TabIndex = 16;
+            this.LstUsers.SelectedIndexChanged += new System.EventHandler(this.LstUsers_SelectedIndexChanged);
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Location = new System.Drawing.Point(17, 200);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(75, 23);
+            this.BtnAdd.TabIndex = 17;
+            this.BtnAdd.Text = "Add";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // BtnRemove
+            // 
+            this.BtnRemove.Location = new System.Drawing.Point(104, 200);
+            this.BtnRemove.Name = "BtnRemove";
+            this.BtnRemove.Size = new System.Drawing.Size(75, 23);
+            this.BtnRemove.TabIndex = 18;
+            this.BtnRemove.Text = "Remove";
+            this.BtnRemove.UseVisualStyleBackColor = true;
+            // 
+            // BtnModify
+            // 
+            this.BtnModify.Location = new System.Drawing.Point(193, 200);
+            this.BtnModify.Name = "BtnModify";
+            this.BtnModify.Size = new System.Drawing.Size(75, 23);
+            this.BtnModify.TabIndex = 19;
+            this.BtnModify.Text = "Modify";
+            this.BtnModify.UseVisualStyleBackColor = true;
+            // 
+            // BtnPrevious
+            // 
+            this.BtnPrevious.Location = new System.Drawing.Point(332, 200);
+            this.BtnPrevious.Name = "BtnPrevious";
+            this.BtnPrevious.Size = new System.Drawing.Size(75, 23);
+            this.BtnPrevious.TabIndex = 20;
+            this.BtnPrevious.Text = "<<";
+            this.BtnPrevious.UseVisualStyleBackColor = true;
+            this.BtnPrevious.Click += new System.EventHandler(this.BtnPrevious_Click);
+            // 
+            // BtnNext
+            // 
+            this.BtnNext.Location = new System.Drawing.Point(520, 200);
+            this.BtnNext.Name = "BtnNext";
+            this.BtnNext.Size = new System.Drawing.Size(75, 23);
+            this.BtnNext.TabIndex = 21;
+            this.BtnNext.Text = ">>";
+            this.BtnNext.UseVisualStyleBackColor = true;
             // 
             // ModifyUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 367);
+            this.ClientSize = new System.Drawing.Size(672, 233);
+            this.Controls.Add(this.BtnNext);
+            this.Controls.Add(this.BtnPrevious);
+            this.Controls.Add(this.BtnModify);
+            this.Controls.Add(this.BtnRemove);
+            this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.LstUsers);
             this.Controls.Add(this.CmbRank);
             this.Controls.Add(this.TxtPassword);
@@ -203,5 +262,10 @@
         private System.Windows.Forms.Label LblPassword;
         private System.Windows.Forms.ComboBox CmbRank;
         private System.Windows.Forms.ListBox LstUsers;
+        private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.Button BtnRemove;
+        private System.Windows.Forms.Button BtnModify;
+        private System.Windows.Forms.Button BtnPrevious;
+        private System.Windows.Forms.Button BtnNext;
     }
 }

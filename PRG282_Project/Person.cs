@@ -38,7 +38,7 @@ namespace PRG282_Project
 
         public override string ToString()
         {
-            return string.Format("{0}#{1}#{2}#{3}#{4}#{5}#{6}",this.id,this.username,this.name,this.surname,this.age,this.rank,this.password);
+            return string.Format("{0} {1} {2} {3} {4} {5} {6}",this.id,this.username,this.name,this.surname,this.age,this.rank,this.password);
         }
     }
 }
