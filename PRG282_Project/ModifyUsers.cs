@@ -34,12 +34,13 @@ namespace PRG282_Project
 
         private void LstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Controller cn = new Controller();
             Person person = (Person)LstUsers.SelectedItem;
             TxtName.Text = person.Name;
             TxtSurname.Text = person.Surname;
             TxtAge.Text = person.Age.ToString();
             TxtUsername.Text = person.Name.Substring(0, 3) + person.Surname.Substring(person.Surname.Length - 2,2);
-            bs.DataSource = dh.ReadLogins();
+            bs.DataSource = cn.ReadLogins();
             CmbRank.DataSource = bs;
             TxtPassword.Text = person.Password;
         }
