@@ -15,13 +15,15 @@ namespace PRG282_Project
             this.path = path;
         }
 
+        public string Path { get => path; }
+
         public List<string> Read()
         {
             List<string> text = new List<string>();
             FileStream fs;
             try
             {
-                using (fs = new FileStream(this.path, FileMode.Open,FileAccess.Read))
+                using (fs = new FileStream(this.Path, FileMode.Open,FileAccess.Read))
                 {
                     StreamReader sr = new StreamReader(fs);
                     string line = string.Empty;
@@ -35,8 +37,7 @@ namespace PRG282_Project
             {
                 text.Add("File not found.");
             }
-            fs = new FileStream(this.path, FileMode.Truncate, FileAccess.Write);
-            fs.Close();
+            
             return text;
         }
 
@@ -44,7 +45,9 @@ namespace PRG282_Project
         {
             try
             {
-                using (FileStream fs = new FileStream(this.path, FileMode.Open, FileAccess.Write))
+                FileStream clear = new FileStream(this.Path, FileMode.Truncate, FileAccess.Write);
+                clear.Close();
+                using (FileStream fs = new FileStream(this.Path, FileMode.Open, FileAccess.Write))
                 {
                     StreamWriter sw = new StreamWriter(fs);
                     for (int i = 0; i < text.Count; i++)

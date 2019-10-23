@@ -7,17 +7,28 @@ namespace PRG282_Project
 {
     class Message
     {
-        private Person person;
         private string content;
+
+	    public string Content
+	    {
+		    get { return content;}
+		    set { content = value;}
+	    }
+
+        private Person person;
+
+        internal Person Person
+        {
+            get { return person; }
+            set { person = value; }
+        }
+        
 
         public Message(Person person, string content)
         {
             this.person = person;
             this.content = content;
         }
-
-        public string Content { get => content; }
-        internal Person Person { get => person; }
 
         public override string ToString()
         {

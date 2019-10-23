@@ -7,15 +7,17 @@ namespace PRG282_Project
 {
     class LoginModel
     {
-        DataHandler dh;
+        Controller cn;
         List<string[]> logins;
 
         public LoginModel()
         {
-            this.dh = new DataHandler();
-            this.logins = dh.ReadLogins();
+            this.cn = new Controller();
+            this.logins = cn.ReadLogins();
         }
 
-        public List<string[]> Logins { get => logins; }
+        public List<string[]> Logins { get { return logins; } }
+        private int myVar;
+	
     }
 }

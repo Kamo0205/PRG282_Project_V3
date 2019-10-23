@@ -53,7 +53,9 @@
     </Compile>
     <Compile Include="Binary.cs" />
     <Compile Include="Cipher.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="DataHandler.cs" />
+    <Compile Include="Emailing.cs" />
     <Compile Include="EncryptDecrypt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +71,7 @@
     </Compile>
     <Compile Include="LoginModel.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="MessageModel.cs" />
     <Compile Include="ModifyUsers.cs">
       <SubType>Form</SubType>
     </Compile>

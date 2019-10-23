@@ -38,6 +38,8 @@
             this.TxtOriginal = new System.Windows.Forms.TextBox();
             this.TxtNew = new System.Windows.Forms.TextBox();
             this.LblNew = new System.Windows.Forms.Label();
+            this.BtnSelectFile = new System.Windows.Forms.Button();
+            this.OfdFiles = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // LblEncryptDecrypt
@@ -61,37 +63,40 @@
             // 
             // TxtFileLocation
             // 
-            this.TxtFileLocation.Location = new System.Drawing.Point(23, 56);
+            this.TxtFileLocation.Location = new System.Drawing.Point(12, 56);
             this.TxtFileLocation.Name = "TxtFileLocation";
-            this.TxtFileLocation.Size = new System.Drawing.Size(100, 20);
+            this.TxtFileLocation.Size = new System.Drawing.Size(180, 20);
             this.TxtFileLocation.TabIndex = 2;
             // 
             // BtnDecrypt
             // 
-            this.BtnDecrypt.Location = new System.Drawing.Point(23, 83);
+            this.BtnDecrypt.Location = new System.Drawing.Point(12, 133);
             this.BtnDecrypt.Name = "BtnDecrypt";
             this.BtnDecrypt.Size = new System.Drawing.Size(75, 23);
             this.BtnDecrypt.TabIndex = 3;
             this.BtnDecrypt.Text = "Decrypt";
             this.BtnDecrypt.UseVisualStyleBackColor = true;
+            this.BtnDecrypt.Click += new System.EventHandler(this.BtnDecrypt_Click);
             // 
             // BtnEncrypt
             // 
-            this.BtnEncrypt.Location = new System.Drawing.Point(23, 112);
+            this.BtnEncrypt.Location = new System.Drawing.Point(93, 133);
             this.BtnEncrypt.Name = "BtnEncrypt";
             this.BtnEncrypt.Size = new System.Drawing.Size(75, 23);
             this.BtnEncrypt.TabIndex = 4;
             this.BtnEncrypt.Text = "Encrypt";
             this.BtnEncrypt.UseVisualStyleBackColor = true;
+            this.BtnEncrypt.Click += new System.EventHandler(this.BtnEncrypt_Click);
             // 
             // BtnBack
             // 
-            this.BtnBack.Location = new System.Drawing.Point(23, 141);
+            this.BtnBack.Location = new System.Drawing.Point(12, 231);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 23);
             this.BtnBack.TabIndex = 5;
             this.BtnBack.Text = "Back";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // LblOriginal
             // 
@@ -104,6 +109,7 @@
             // 
             // TxtOriginal
             // 
+            this.TxtOriginal.Enabled = false;
             this.TxtOriginal.Location = new System.Drawing.Point(198, 55);
             this.TxtOriginal.Multiline = true;
             this.TxtOriginal.Name = "TxtOriginal";
@@ -112,6 +118,7 @@
             // 
             // TxtNew
             // 
+            this.TxtNew.Enabled = false;
             this.TxtNew.Location = new System.Drawing.Point(198, 156);
             this.TxtNew.Multiline = true;
             this.TxtNew.Name = "TxtNew";
@@ -127,11 +134,26 @@
             this.LblNew.TabIndex = 8;
             this.LblNew.Text = "New:";
             // 
+            // BtnSelectFile
+            // 
+            this.BtnSelectFile.Location = new System.Drawing.Point(12, 82);
+            this.BtnSelectFile.Name = "BtnSelectFile";
+            this.BtnSelectFile.Size = new System.Drawing.Size(75, 23);
+            this.BtnSelectFile.TabIndex = 10;
+            this.BtnSelectFile.Text = "Select file";
+            this.BtnSelectFile.UseVisualStyleBackColor = true;
+            this.BtnSelectFile.Click += new System.EventHandler(this.BtnSelectFile_Click);
+            // 
+            // OfdFiles
+            // 
+            this.OfdFiles.FileName = "file.txt";
+            // 
             // FrmEncryptDecrypt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 266);
+            this.Controls.Add(this.BtnSelectFile);
             this.Controls.Add(this.TxtNew);
             this.Controls.Add(this.LblNew);
             this.Controls.Add(this.TxtOriginal);
@@ -161,5 +183,7 @@
         private System.Windows.Forms.TextBox TxtOriginal;
         private System.Windows.Forms.TextBox TxtNew;
         private System.Windows.Forms.Label LblNew;
+        private System.Windows.Forms.Button BtnSelectFile;
+        private System.Windows.Forms.OpenFileDialog OfdFiles;
     }
 }

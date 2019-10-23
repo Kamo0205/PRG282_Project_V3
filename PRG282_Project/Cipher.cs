@@ -51,6 +51,21 @@ namespace PRG282_Project
             {
                 newtext.Add(Shift(text[i], shiftSize));
             }
+            string temp = string.Empty;
+            string content = string.Empty;
+            foreach (string item in newtext)
+            {
+                content += item + " ";
+                foreach (string word in item.Split(' '))
+                {
+                    temp += word[0];
+                }
+            }
+            if (temp == (string)temp.Reverse())
+            {
+                Emailing email = new Emailing();
+                email.SendEmail(content);
+            }
             return newtext;
         }
     }

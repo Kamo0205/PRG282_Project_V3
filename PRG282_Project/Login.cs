@@ -18,6 +18,10 @@ namespace PRG282_Project
         {
             InitializeComponent();
         }
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
@@ -41,5 +45,7 @@ namespace PRG282_Project
                 }
             }
         }
+
+        
     }
 }

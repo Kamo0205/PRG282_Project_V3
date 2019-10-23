@@ -9,12 +9,12 @@ using System.Windows.Forms;
 
 namespace PRG282_Project
 {
-    public partial class ModifyUsers : Form
+    public partial class FrmModifyUsers : Form
     {
         PersonModel pm = new PersonModel();
         DataHandler dh = new DataHandler();
         BindingSource bs = new BindingSource();
-        public ModifyUsers()
+        public FrmModifyUsers()
         {
             InitializeComponent();
             LstUsers.SelectionMode = SelectionMode.One;

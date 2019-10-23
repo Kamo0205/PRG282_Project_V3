@@ -1,6 +1,6 @@
 ﻿namespace PRG282_Project
 {
-    partial class ModifyUsers
+    partial class FrmModifyUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -215,7 +215,7 @@
             this.BtnNext.Text = ">>";
             this.BtnNext.UseVisualStyleBackColor = true;
             // 
-            // ModifyUsers
+            // FrmModifyUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -239,7 +239,7 @@
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.LblHeader);
-            this.Name = "ModifyUsers";
+            this.Name = "FrmModifyUsers";
             this.Text = "ModifyUsers";
             this.ResumeLayout(false);
             this.PerformLayout();

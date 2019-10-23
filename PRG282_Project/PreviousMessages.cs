@@ -11,9 +11,22 @@ namespace PRG282_Project
 {
     public partial class FrmPreviousMessages : Form
     {
-        public FrmPreviousMessages()
+        bool isOfficerHigher;
+        string username;
+        
+        public FrmPreviousMessages(bool isOfficerHigher, string username)
         {
+            this.isOfficerHigher = isOfficerHigher;
+            this.username = username;
             InitializeComponent();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            FrmWelcomeScreen welcomeScreen = new FrmWelcomeScreen(this.isOfficerHigher, this.username);
+            this.Hide();
+            welcomeScreen.ShowDialog();
+            this.Close();
         }
     }
 }

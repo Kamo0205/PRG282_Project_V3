@@ -75,6 +75,7 @@
             this.BtnViewPreviousMessages.TabIndex = 3;
             this.BtnViewPreviousMessages.Text = "View Previous Messages";
             this.BtnViewPreviousMessages.UseVisualStyleBackColor = true;
+            this.BtnViewPreviousMessages.Click += new System.EventHandler(this.BtnViewPreviousMessages_Click);
             // 
             // BtnViewDecryptedMessages
             // 
@@ -84,6 +85,7 @@
             this.BtnViewDecryptedMessages.TabIndex = 4;
             this.BtnViewDecryptedMessages.Text = "View Decrypted Messages";
             this.BtnViewDecryptedMessages.UseVisualStyleBackColor = true;
+            this.BtnViewDecryptedMessages.Click += new System.EventHandler(this.BtnViewDecryptedMessages_Click);
             // 
             // BtnQuit
             // 
@@ -93,6 +95,7 @@
             this.BtnQuit.TabIndex = 5;
             this.BtnQuit.Text = "Quit";
             this.BtnQuit.UseVisualStyleBackColor = true;
+            this.BtnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // BtnAddUser
             // 

@@ -57,13 +57,13 @@
             this.TxtMessageContent.Location = new System.Drawing.Point(155, 45);
             this.TxtMessageContent.Multiline = true;
             this.TxtMessageContent.Name = "TxtMessageContent";
-            this.TxtMessageContent.Size = new System.Drawing.Size(136, 186);
+            this.TxtMessageContent.Size = new System.Drawing.Size(206, 186);
             this.TxtMessageContent.TabIndex = 2;
             // 
             // LblMessageContent
             // 
             this.LblMessageContent.AutoSize = true;
-            this.LblMessageContent.Location = new System.Drawing.Point(178, 13);
+            this.LblMessageContent.Location = new System.Drawing.Point(152, 20);
             this.LblMessageContent.Name = "LblMessageContent";
             this.LblMessageContent.Size = new System.Drawing.Size(44, 13);
             this.LblMessageContent.TabIndex = 3;
@@ -77,12 +77,13 @@
             this.BtnBack.TabIndex = 4;
             this.BtnBack.Text = "Back";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // FrmPreviousMessages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 278);
+            this.ClientSize = new System.Drawing.Size(373, 278);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.LblMessageContent);
             this.Controls.Add(this.TxtMessageContent);

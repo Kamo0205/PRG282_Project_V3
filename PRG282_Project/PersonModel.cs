@@ -7,13 +7,13 @@ namespace PRG282_Project
 {
     class PersonModel
     {
-        DataHandler dh;
+        Controller cn;
         List<Person> people;
 
         public PersonModel()
         {
-            dh = new DataHandler();
-            this.people = dh.ReadPeople();
+            cn = new Controller();
+            this.people = cn.ReadPeople();
         }
 
         public List<Person> People { get => people;  }
@@ -30,7 +30,7 @@ namespace PRG282_Project
             {
                 if (username.ToLower() == person.Username.ToLower())
                 {
-                    foreach (string[] rank in dh.ReadRanks())
+                    foreach (string[] rank in cn.ReadRanks())
                     {
                         if (rank[1].ToLower() == person.Rank.ToLower())
                         {
