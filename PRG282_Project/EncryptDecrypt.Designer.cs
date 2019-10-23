@@ -1,6 +1,6 @@
 ﻿namespace PRG282_Project
 {
-    partial class EncryptDecrypt
+    partial class FrmEncryptDecrypt
     {
         /// <summary>
         /// Required designer variable.
@@ -127,7 +127,7 @@
             this.LblNew.TabIndex = 8;
             this.LblNew.Text = "New:";
             // 
-            // EncryptDecrypt
+            // FrmEncryptDecrypt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.TxtFileLocation);
             this.Controls.Add(this.LblFileLocation);
             this.Controls.Add(this.LblEncryptDecrypt);
-            this.Name = "EncryptDecrypt";
+            this.Name = "FrmEncryptDecrypt";
             this.Text = "EncryptDecrypt";
             this.ResumeLayout(false);
             this.PerformLayout();

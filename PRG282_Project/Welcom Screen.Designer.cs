@@ -34,6 +34,7 @@
             this.BtnViewPreviousMessages = new System.Windows.Forms.Button();
             this.BtnViewDecryptedMessages = new System.Windows.Forms.Button();
             this.BtnQuit = new System.Windows.Forms.Button();
+            this.BtnAddUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblWelcome
@@ -54,6 +55,7 @@
             this.BtnDecryptMessage.TabIndex = 1;
             this.BtnDecryptMessage.Text = "Decrypt Message";
             this.BtnDecryptMessage.UseVisualStyleBackColor = true;
+            this.BtnDecryptMessage.Click += new System.EventHandler(this.BtnDecryptMessage_Click);
             // 
             // BtnEncryptMessage
             // 
@@ -63,7 +65,7 @@
             this.BtnEncryptMessage.TabIndex = 2;
             this.BtnEncryptMessage.Text = "Encrypt Message";
             this.BtnEncryptMessage.UseVisualStyleBackColor = true;
-            this.BtnEncryptMessage.Click += new System.EventHandler(this.button1_Click);
+            this.BtnEncryptMessage.Click += new System.EventHandler(this.BtnEncryptMessage_Click);
             // 
             // BtnViewPreviousMessages
             // 
@@ -85,18 +87,29 @@
             // 
             // BtnQuit
             // 
-            this.BtnQuit.Location = new System.Drawing.Point(143, 146);
+            this.BtnQuit.Location = new System.Drawing.Point(199, 136);
             this.BtnQuit.Name = "BtnQuit";
             this.BtnQuit.Size = new System.Drawing.Size(118, 23);
             this.BtnQuit.TabIndex = 5;
             this.BtnQuit.Text = "Quit";
             this.BtnQuit.UseVisualStyleBackColor = true;
             // 
+            // BtnAddUser
+            // 
+            this.BtnAddUser.Location = new System.Drawing.Point(75, 136);
+            this.BtnAddUser.Name = "BtnAddUser";
+            this.BtnAddUser.Size = new System.Drawing.Size(118, 23);
+            this.BtnAddUser.TabIndex = 6;
+            this.BtnAddUser.Text = "Add User";
+            this.BtnAddUser.UseVisualStyleBackColor = true;
+            this.BtnAddUser.Click += new System.EventHandler(this.BtnAddUser_Click);
+            // 
             // FrmWelcomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 187);
+            this.Controls.Add(this.BtnAddUser);
             this.Controls.Add(this.BtnQuit);
             this.Controls.Add(this.BtnViewDecryptedMessages);
             this.Controls.Add(this.BtnViewPreviousMessages);
@@ -118,5 +131,6 @@
         private System.Windows.Forms.Button BtnViewPreviousMessages;
         private System.Windows.Forms.Button BtnViewDecryptedMessages;
         private System.Windows.Forms.Button BtnQuit;
+        private System.Windows.Forms.Button BtnAddUser;
     }
 }
