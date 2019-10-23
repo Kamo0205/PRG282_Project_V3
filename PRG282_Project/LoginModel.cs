@@ -16,8 +16,7 @@ namespace PRG282_Project
             this.logins = cn.ReadLogins();
         }
 
-        public List<string[]> Logins { get { return logins; } }
-        private int myVar;
+        public List<string[]> Logins { get => logins; }
 	
     }
 }
