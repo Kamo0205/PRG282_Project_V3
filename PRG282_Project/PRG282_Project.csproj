@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="Binary.cs" />
     <Compile Include="Cipher.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="DataHandler.cs" />
     <Compile Include="EncryptDecrypt.cs">
       <SubType>Form</SubType>
