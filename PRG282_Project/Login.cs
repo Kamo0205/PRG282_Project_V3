@@ -30,12 +30,14 @@ namespace PRG282_Project
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            bool logged = false;
             if ((TxtUsername.Text.Length > 0) && (TxtPassword.Text.Length > 0))
             {
                 foreach (string[] login in lm.Logins)
                 {
                     if ((login[0].ToLower() == TxtUsername.Text.ToLower()) && (login[1] == cipher.Shift(TxtPassword.Text,3)))
                     {
+                        logged = true;
                         MessageBox.Show("Successful Login", "Login Attempt", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmWelcomeScreen welcomeScreen = new FrmWelcomeScreen(pm.IsAboveOfficer(login[0]),login[0]);
                         this.Hide();
@@ -43,6 +45,12 @@ namespace PRG282_Project
                         this.Close();
                     }
                 }
+            }
+            if (!logged)
+            {
+                MessageBox.Show("Wrong credentials");
+                TxtPassword.Clear();
+                TxtUsername.Clear();
             }
         }
 
