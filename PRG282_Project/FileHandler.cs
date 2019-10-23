@@ -36,15 +36,6 @@ namespace PRG282_Project
                         {
                             initials.Add(char.Parse(word.Substring(0, 1)));
                         }
-                        string wordA = initials.ToString();
-                        initials.Reverse();
-                        string wordB = initials.ToString();
-                        if (wordA == wordB)
-                        {
-                            string emailtext = line + " Phrase: " + wordA;
-                            Email email = new Email();
-                            email.SendEmail(emailtext);
-                        }
                     }
                 }
             }
